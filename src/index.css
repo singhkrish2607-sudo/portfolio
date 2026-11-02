@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Bricolage Grotesque", system-ui, sans-serif;
+  --font-body: "Satoshi", system-ui, sans-serif;
+  --color-canvas: oklch(16% 0.04 290);
+  --color-canvas-raised: oklch(21% 0.045 290);
+  --color-ink: oklch(97% 0.01 290);
+  --color-accent: oklch(78% 0.19 130);
+  --color-violet: oklch(55% 0.23 305);
+  --color-coral: oklch(68% 0.19 30);
+  --color-cyan: oklch(75% 0.14 210);
+  --color-gold: oklch(80% 0.15 85);
+}
+
+:root {
+  --color-canvas: oklch(16% 0.04 290);
+  --color-canvas-raised: oklch(21% 0.045 290);
+  --color-ink: oklch(97% 0.01 290);
+  --color-accent: oklch(78% 0.19 130);
+  --color-violet: oklch(55% 0.23 305);
+  --color-coral: oklch(68% 0.19 30);
+  --color-cyan: oklch(75% 0.14 210);
+  --color-gold: oklch(80% 0.15 85);
+  --font-display: "Bricolage Grotesque", system-ui, sans-serif;
+  --font-body: "Satoshi", system-ui, sans-serif;
+}
+
+body {
+  background-color: var(--color-canvas);
+  font-family: var(--font-body);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: radial-gradient(#f5f4fc0f 1.4px, transparent 1.4px);
+  background-size: 22px 22px;
+  overflow-x: hidden;
+}
+
+@media (pointer: fine) {
+  body {
+    cursor: none;
+  }
+  a, button, [role="button"], input, select, textarea, [data-cursor="grow"] {
+    cursor: none;
+  }
+}
+
+@keyframes float-hero {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+
+@keyframes rotate-badge {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(12deg); }
+}
+
+@keyframes bounce-scroll {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+
+.animate-float-hero {
+  animation: float-hero 4s ease-in-out infinite;
+}
+
+.animate-rotate-badge {
+  animation: rotate-badge 3s ease-in-out infinite;
+}
+
+.animate-bounce-scroll {
+  animation: bounce-scroll 1.8s ease-in-out infinite;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(34, 27, 61, 0.6);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(247, 246, 251, 0.2);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(182, 242, 74, 0.4);
+}

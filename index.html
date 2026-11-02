@@ -1,0 +1,1233 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Krish Singh - SQL Developer & Data Analyst</title>
+    <meta
+      name="description"
+      content="Portfolio of Krish Singh, a SQL Developer and Data Analyst working with MySQL, PostgreSQL and Python."
+    />
+    <meta name="theme-color" content="#221b3d" />
+    <link rel="canonical" href="https://portfolio-site-966.app.orvisai.com/" />
+
+    <!-- Google / Bunny Fonts: Bricolage Grotesque & Satoshi -->
+    <link rel="preconnect" href="https://fonts.bunny.net" />
+    <link
+      href="https://fonts.bunny.net/css?family=bricolage-grotesque:800,600|satoshi:400,500,700"
+      rel="stylesheet"
+    />
+
+    <!-- Social Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Krish Singh - SQL Developer & Data Analyst" />
+    <meta
+      property="og:description"
+      content="Portfolio of Krish Singh, a SQL Developer and Data Analyst working with MySQL, PostgreSQL and Python."
+    />
+    <meta property="og:image" content="./og-image.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Krish Singh - SQL Developer & Data Analyst" />
+    <meta
+      name="twitter:description"
+      content="Portfolio of Krish Singh, a SQL Developer and Data Analyst working with MySQL, PostgreSQL and Python."
+    />
+    <meta name="twitter:image" content="./og-image.jpg" />
+
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="apple-touch-icon" href="./favicon.svg" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              display: ['"Bricolage Grotesque"', 'system-ui', 'sans-serif'],
+              body: ['"Satoshi"', 'system-ui', 'sans-serif']
+            },
+            colors: {
+              canvas: 'oklch(16% 0.04 290)',
+              'canvas-raised': 'oklch(21% 0.045 290)',
+              ink: 'oklch(97% 0.01 290)',
+              accent: 'oklch(78% 0.19 130)',
+              violet: 'oklch(55% 0.23 305)',
+              coral: 'oklch(68% 0.19 30)',
+              cyan: 'oklch(75% 0.14 210)',
+              gold: 'oklch(80% 0.15 85)'
+            }
+          }
+        }
+      }
+    </script>
+
+    <style>
+      :root {
+        --color-canvas: oklch(16% 0.04 290);
+        --color-canvas-raised: oklch(21% 0.045 290);
+        --color-ink: oklch(97% 0.01 290);
+        --color-accent: oklch(78% 0.19 130);
+        --color-violet: oklch(55% 0.23 305);
+        --color-coral: oklch(68% 0.19 30);
+        --color-cyan: oklch(75% 0.14 210);
+        --color-gold: oklch(80% 0.15 85);
+        --font-display: "Bricolage Grotesque", system-ui, sans-serif;
+        --font-body: "Satoshi", system-ui, sans-serif;
+      }
+
+      body {
+        background-color: var(--color-canvas);
+        font-family: var(--font-body);
+        color: var(--color-ink);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-image: radial-gradient(#f5f4fc0f 1.4px, transparent 1.4px);
+        background-size: 22px 22px;
+        overflow-x: hidden;
+      }
+
+      @media (pointer: fine) {
+        body {
+          cursor: none;
+        }
+        a, button, [role="button"], input, select, textarea, [data-cursor="grow"] {
+          cursor: none;
+        }
+      }
+
+      /* Masking tape texture */
+      .masking-tape {
+        background-image: repeating-linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0.18) 0 6px,
+          transparent 6px 12px
+        );
+      }
+
+      /* Neo-brutalist shadows */
+      .neo-shadow-card {
+        box-shadow: 6px 8px 0 0 oklch(0.10 0.03 290);
+      }
+      .neo-shadow-lg {
+        box-shadow: 8px 10px 0 0 oklch(0.10 0.03 290);
+      }
+      .neo-shadow-btn {
+        box-shadow: 4px 6px 0 0 oklch(0.16 0.04 290);
+      }
+      .neo-shadow-badge {
+        box-shadow: 3px 4px 0 0 oklch(0.16 0.04 290);
+      }
+      .neo-shadow-skill {
+        box-shadow: 4px 5px 0 0 oklch(0.10 0.03 290);
+      }
+
+      /* Keyframe animations */
+      @keyframes float-hero {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-14px); }
+      }
+      @keyframes rotate-badge {
+        0%, 100% { transform: rotate(0deg); }
+        50% { transform: rotate(12deg); }
+      }
+      @keyframes bounce-scroll {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(8px); }
+      }
+
+      .animate-float-hero {
+        animation: float-hero 4s ease-in-out infinite;
+      }
+      .animate-rotate-badge {
+        animation: rotate-badge 3s ease-in-out infinite;
+      }
+      .animate-bounce-scroll {
+        animation: bounce-scroll 1.8s ease-in-out infinite;
+      }
+
+      /* Custom scrollbars */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: rgba(34, 27, 61, 0.6);
+      }
+      ::-webkit-scrollbar-thumb {
+        background: rgba(247, 246, 251, 0.2);
+        border-radius: 9999px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: rgba(182, 242, 74, 0.4);
+      }
+    </style>
+  </head>
+  <body class="selection:bg-accent selection:text-canvas">
+    <!-- Viewport Corner Brackets (Desktop) -->
+    <svg viewBox="0 0 40 40" class="pointer-events-none fixed left-3 top-3 z-30 hidden h-6 w-6 text-ink/25 lg:block">
+      <path d="M2 14V2H14" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round"/>
+    </svg>
+    <svg viewBox="0 0 40 40" class="pointer-events-none fixed right-3 top-3 z-30 hidden h-6 w-6 rotate-90 text-ink/25 lg:block">
+      <path d="M2 14V2H14" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round"/>
+    </svg>
+    <svg viewBox="0 0 40 40" class="pointer-events-none fixed bottom-3 left-3 z-30 hidden h-6 w-6 -rotate-90 text-ink/25 lg:block">
+      <path d="M2 14V2H14" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round"/>
+    </svg>
+    <svg viewBox="0 0 40 40" class="pointer-events-none fixed bottom-3 right-3 z-30 hidden h-6 w-6 rotate-180 text-ink/25 lg:block">
+      <path d="M2 14V2H14" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round"/>
+    </svg>
+
+    <!-- Custom Dual Cursor -->
+    <div id="cursor-dot" class="pointer-events-none fixed left-0 top-0 z-[100] -ml-1 -mt-1 hidden h-2 w-2 rounded-full bg-accent transition-opacity duration-150 md:block"></div>
+    <div id="cursor-ring" class="pointer-events-none fixed left-0 top-0 z-[100] -ml-5 -mt-5 hidden h-10 w-10 rounded-full border-2 border-accent mix-blend-difference transition-transform duration-200 ease-out md:block"></div>
+
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-6 py-5 md:px-12 backdrop-blur-md bg-canvas/60">
+      <a href="#top" data-cursor="grow" class="relative font-display text-xl font-extrabold tracking-tight">
+        KRISH<span class="text-accent">.</span>
+        <!-- Small gold sparkle star -->
+        <svg viewBox="0 0 40 40" fill="none" class="pointer-events-none absolute -right-4 -top-3 h-3.5 w-3.5 rotate-12 text-gold">
+          <path d="M20 3L23 16L36 20L23 24L20 37L17 24L4 20L17 16L20 3Z" fill="currentColor"/>
+        </svg>
+      </a>
+
+      <!-- Desktop Nav (Home, Projects, Experience, About, Contact) -->
+      <nav class="hidden items-center gap-8 md:flex">
+        <a href="#top" data-cursor="grow" class="group relative text-sm font-medium text-ink/80 transition-colors hover:text-accent">
+          Home
+          <svg viewBox="0 0 200 16" fill="none" preserveAspectRatio="none" class="absolute -bottom-2 left-0 h-2 w-full text-accent opacity-0 transition-opacity group-hover:opacity-100">
+            <path d="M2 10C30 2 55 2 75 8C95 14 120 14 145 6C165 0 185 4 198 8" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+          </svg>
+        </a>
+        <a href="#projects" data-cursor="grow" class="group relative text-sm font-medium text-ink/80 transition-colors hover:text-accent">
+          Projects
+          <svg viewBox="0 0 200 16" fill="none" preserveAspectRatio="none" class="absolute -bottom-2 left-0 h-2 w-full text-accent opacity-0 transition-opacity group-hover:opacity-100">
+            <path d="M2 10C30 2 55 2 75 8C95 14 120 14 145 6C165 0 185 4 198 8" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+          </svg>
+        </a>
+        <a href="#experience" data-cursor="grow" class="group relative text-sm font-medium text-ink/80 transition-colors hover:text-accent">
+          Experience
+          <svg viewBox="0 0 200 16" fill="none" preserveAspectRatio="none" class="absolute -bottom-2 left-0 h-2 w-full text-accent opacity-0 transition-opacity group-hover:opacity-100">
+            <path d="M2 10C30 2 55 2 75 8C95 14 120 14 145 6C165 0 185 4 198 8" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+          </svg>
+        </a>
+        <a href="#about" data-cursor="grow" class="group relative text-sm font-medium text-ink/80 transition-colors hover:text-accent">
+          About
+          <svg viewBox="0 0 200 16" fill="none" preserveAspectRatio="none" class="absolute -bottom-2 left-0 h-2 w-full text-accent opacity-0 transition-opacity group-hover:opacity-100">
+            <path d="M2 10C30 2 55 2 75 8C95 14 120 14 145 6C165 0 185 4 198 8" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+          </svg>
+        </a>
+        <a href="#contact" data-cursor="grow" class="group relative text-sm font-medium text-ink/80 transition-colors hover:text-accent">
+          Contact
+          <svg viewBox="0 0 200 16" fill="none" preserveAspectRatio="none" class="absolute -bottom-2 left-0 h-2 w-full text-accent opacity-0 transition-opacity group-hover:opacity-100">
+            <path d="M2 10C30 2 55 2 75 8C95 14 120 14 145 6C165 0 185 4 198 8" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+          </svg>
+        </a>
+      </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobile-menu-btn" data-cursor="grow" aria-label="Open menu" class="flex h-10 w-10 items-center justify-center rounded-full border-2 border-dashed border-ink/25 text-ink md:hidden transition-transform active:scale-95">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4.5 w-4.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/>
+        </svg>
+      </button>
+    </header>
+
+    <!-- Mobile Drawer Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 z-50 flex flex-col justify-between bg-canvas/95 px-8 py-10 backdrop-blur-lg transition-all duration-300 -translate-y-full opacity-0 pointer-events-none md:hidden">
+      <div class="flex items-center justify-between">
+        <a href="#top" class="font-display text-2xl font-extrabold tracking-tight">
+          KRISH<span class="text-accent">.</span>
+        </a>
+        <button id="mobile-close-btn" aria-label="Close menu" class="flex h-10 w-10 items-center justify-center rounded-full border-2 border-dashed border-ink/25 text-ink">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 6 6 18"/><path d="m6 6 12 12"/>
+          </svg>
+        </button>
+      </div>
+
+      <nav class="flex flex-col gap-6 text-2xl font-display font-extrabold">
+        <a href="#top" class="mobile-nav-link hover:text-accent">Home</a>
+        <a href="#projects" class="mobile-nav-link hover:text-accent">Projects</a>
+        <a href="#experience" class="mobile-nav-link hover:text-accent">Experience</a>
+        <a href="#about" class="mobile-nav-link hover:text-accent">About</a>
+        <a href="#contact" class="mobile-nav-link hover:text-accent">Contact</a>
+      </nav>
+
+      <div>
+        <a href="./Resume.pdf" download="Resume.pdf" class="flex w-full items-center justify-center gap-2 rounded-full bg-accent px-6 py-4 font-display text-sm font-extrabold text-canvas neo-shadow-btn">
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/>
+          </svg>
+          Download Resume
+        </a>
+      </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main>
+      <!-- ==================== HERO SECTION ==================== -->
+      <section id="top" class="relative overflow-hidden px-6 pt-32 pb-24 md:px-12 md:pt-40">
+        <!-- Ambient Glow Blobs -->
+        <div class="pointer-events-none absolute -left-16 top-24 h-64 w-64 rounded-full bg-violet/25 blur-3xl"></div>
+        <div class="pointer-events-none absolute right-0 top-52 h-72 w-72 rounded-full bg-accent/15 blur-3xl"></div>
+
+        <!-- Decorative Elements -->
+        <svg viewBox="0 0 200 120" fill="none" class="pointer-events-none absolute left-4 bottom-10 h-28 w-44 text-cyan opacity-40 md:left-10">
+          <g fill="currentColor">
+            <circle cx="6" cy="6" r="1.4" opacity="0.5"/><circle cx="21" cy="6" r="1.9" opacity="0.5"/><circle cx="36" cy="6" r="2.4" opacity="0.5"/><circle cx="51" cy="6" r="1.4" opacity="0.5"/><circle cx="66" cy="6" r="1.9" opacity="0.5"/><circle cx="81" cy="6" r="2.4" opacity="0.5"/><circle cx="96" cy="6" r="1.4" opacity="0.5"/><circle cx="111" cy="6" r="1.9" opacity="0.5"/><circle cx="126" cy="6" r="2.4" opacity="0.5"/><circle cx="141" cy="6" r="1.4" opacity="0.5"/><circle cx="156" cy="6" r="1.9" opacity="0.5"/><circle cx="171" cy="6" r="2.4" opacity="0.5"/><circle cx="186" cy="6" r="1.4" opacity="0.5"/><circle cx="201" cy="6" r="1.9" opacity="0.5"/>
+            <circle cx="6" cy="21" r="1.9" opacity="0.5"/><circle cx="21" cy="21" r="2.4" opacity="0.5"/><circle cx="36" cy="21" r="1.4" opacity="0.5"/><circle cx="51" cy="21" r="1.9" opacity="0.5"/><circle cx="66" cy="21" r="2.4" opacity="0.5"/><circle cx="81" cy="21" r="1.4" opacity="0.5"/><circle cx="96" cy="21" r="1.9" opacity="0.5"/><circle cx="111" cy="21" r="2.4" opacity="0.5"/><circle cx="126" cy="21" r="1.4" opacity="0.5"/><circle cx="141" cy="21" r="1.9" opacity="0.5"/><circle cx="156" cy="21" r="2.4" opacity="0.5"/><circle cx="171" cy="21" r="1.4" opacity="0.5"/><circle cx="186" cy="21" r="1.9" opacity="0.5"/><circle cx="201" cy="21" r="2.4" opacity="0.5"/>
+          </g>
+        </svg>
+
+        <svg viewBox="0 0 60 60" fill="none" class="pointer-events-none absolute right-[8%] top-16 h-8 w-8 text-gold opacity-70 md:right-[28%]">
+          <path d="M30 2L34 24L56 28L34 32L30 58L26 32L4 28L26 24L30 2Z" fill="currentColor"/>
+        </svg>
+
+        <svg viewBox="0 0 40 40" fill="none" class="pointer-events-none absolute left-[6%] top-1/2 h-5 w-5 text-coral opacity-70">
+          <path d="M20 3L23 16L36 20L23 24L20 37L17 24L4 20L17 16L20 3Z" fill="currentColor"/>
+        </svg>
+
+        <div class="relative z-10 mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 md:grid-cols-2">
+          <!-- Left Column -->
+          <div>
+            <div class="relative mb-4 inline-flex items-center gap-2 rounded-full bg-canvas-raised px-4 py-1.5 text-sm font-medium text-ink/80">
+              <svg class="h-3.5 w-3.5 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/>
+              </svg>
+              Hey, I’m
+              <svg viewBox="0 0 120 20" fill="none" class="pointer-events-none absolute -bottom-4 left-2 h-3 w-16 text-ink/25">
+                <path d="M2 14C10 4 18 4 26 14C34 24 42 24 50 14C58 4 66 4 74 14C82 24 90 24 98 14C104 6 112 6 118 12" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+              </svg>
+            </div>
+
+            <h1 class="relative font-display text-6xl font-extrabold leading-[0.95] tracking-tight sm:text-7xl md:text-8xl">
+              KRISH
+              <svg viewBox="0 0 200 16" fill="none" preserveAspectRatio="none" class="absolute -bottom-3 left-0 h-4 w-48 text-accent sm:w-56 md:w-64">
+                <path d="M2 10C30 2 55 2 75 8C95 14 120 14 145 6C165 0 185 4 198 8" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+              </svg>
+            </h1>
+
+            <p class="mt-8 max-w-md text-lg font-medium text-ink/80">
+              SQL Developer&nbsp;·&nbsp;Data Analyst&nbsp;·&nbsp;Trainer
+            </p>
+
+            <div class="relative mt-10 flex flex-wrap items-center gap-4">
+              <a href="./Resume.pdf" download="Resume.pdf" data-cursor="grow" class="magnetic-btn flex items-center gap-2 rounded-full bg-accent px-7 py-4 font-display text-sm font-extrabold text-canvas neo-shadow-btn transition-transform hover:-translate-y-0.5 active:translate-y-0">
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/>
+                </svg>
+                Download Resume
+              </a>
+
+              <a href="#projects" data-cursor="grow" class="magnetic-btn rounded-full border-2 border-ink/25 px-7 py-4 font-display text-sm font-extrabold text-ink transition-colors hover:border-accent hover:text-accent">
+                View Projects
+              </a>
+
+              <svg viewBox="0 0 100 60" fill="none" class="pointer-events-none absolute -right-16 top-1/2 hidden h-10 w-20 -translate-y-1/2 rotate-6 text-ink/40 lg:block">
+                <path d="M4 8C30 4 55 44 94 48" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="7 8"/>
+                <path d="M80 40L96 49L84 58" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Right Column: Cartoon Character Illustration & Floating Badges -->
+          <div class="relative flex justify-center md:justify-end">
+            <div class="pointer-events-none absolute h-72 w-72 rounded-full bg-violet/35 blur-3xl"></div>
+            <svg viewBox="0 0 200 120" fill="none" class="pointer-events-none absolute -right-4 bottom-0 h-24 w-40 text-gold opacity-40">
+              <g fill="currentColor">
+                <circle cx="6" cy="6" r="1.4" opacity="0.5"/><circle cx="21" cy="6" r="1.9" opacity="0.5"/><circle cx="36" cy="6" r="2.4" opacity="0.5"/><circle cx="51" cy="6" r="1.4" opacity="0.5"/><circle cx="66" cy="6" r="1.9" opacity="0.5"/>
+                <circle cx="6" cy="21" r="1.9" opacity="0.5"/><circle cx="21" cy="21" r="2.4" opacity="0.5"/><circle cx="36" cy="21" r="1.4" opacity="0.5"/><circle cx="51" cy="21" r="1.9" opacity="0.5"/>
+              </g>
+            </svg>
+
+            <div class="animate-float-hero relative w-full max-w-sm">
+              <img
+                src="./img/krish-character.png"
+                alt="Cartoon character of Krish Singh"
+                class="relative z-10 w-full drop-shadow-[0_20px_35px_rgba(0,0,0,0.5)]"
+              />
+
+              <!-- Floating Cyan Badge (site966: "Let's query something awesome!") -->
+              <div class="animate-rotate-badge absolute top-2 right-2 z-20 rounded-2xl bg-cyan px-4 py-2 font-display text-xs font-extrabold text-canvas neo-shadow-badge">
+                Let’s query<br />something awesome!
+              </div>
+
+              <!-- Floating Star & Sparkles -->
+              <svg class="absolute -left-6 top-10 z-20 h-7 w-7 text-gold" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/>
+              </svg>
+
+              <svg class="absolute bottom-6 -right-2 z-20 h-6 w-6 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/>
+              </svg>
+
+              <!-- Starburst "SQL" badge -->
+              <div class="absolute -left-8 bottom-16 z-20 hidden h-16 w-16 -rotate-8 items-center justify-center font-display text-[10px] font-extrabold text-canvas sm:flex">
+                <svg viewBox="0 0 100 100" class="absolute inset-0 h-full w-full text-coral" fill="currentColor">
+                  <path d="M50 2L60 20L80 8L76 30L98 34L80 46L94 64L72 60L70 82L54 66L38 86L34 64L12 70L20 50L2 38L24 32L18 12L40 22L50 2Z"/>
+                </svg>
+                <span class="relative z-10">SQL</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scroll down indicator -->
+        <a href="#projects" data-cursor="grow" class="animate-bounce-scroll absolute bottom-6 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-1 text-ink/50 md:flex" aria-label="Scroll down">
+          <span class="font-display text-xs font-bold uppercase tracking-widest">Scroll</span>
+          <svg class="h-4.5 w-4.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m6 9 6 6 6-6"/>
+          </svg>
+        </a>
+      </section>
+
+      <!-- Wave divider (violet) -->
+      <div class="px-6 md:px-12">
+        <svg viewBox="0 0 1440 40" fill="none" preserveAspectRatio="none" class="mx-auto h-6 w-full max-w-6xl text-violet">
+          <path d="M0 20C120 0 240 40 360 20C480 0 600 40 720 20C840 0 960 40 1080 20C1200 0 1320 40 1440 20" stroke="currentColor" stroke-width="3" stroke-dasharray="2 10" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+      <!-- ==================== PROJECTS SECTION ==================== -->
+      <section id="projects" class="relative overflow-hidden px-6 py-20 md:px-12">
+        <svg viewBox="0 0 200 120" fill="none" class="pointer-events-none absolute right-4 top-2 h-24 w-40 text-coral opacity-25 md:right-14">
+          <g fill="currentColor">
+            <circle cx="6" cy="6" r="1.4" opacity="0.5"/><circle cx="21" cy="6" r="1.9" opacity="0.5"/><circle cx="36" cy="6" r="2.4" opacity="0.5"/><circle cx="51" cy="6" r="1.4" opacity="0.5"/>
+            <circle cx="6" cy="21" r="1.9" opacity="0.5"/><circle cx="21" cy="21" r="2.4" opacity="0.5"/><circle cx="36" cy="21" r="1.4" opacity="0.5"/><circle cx="51" cy="21" r="1.9" opacity="0.5"/>
+          </g>
+        </svg>
+
+        <svg viewBox="0 0 60 60" fill="none" class="pointer-events-none absolute left-[3%] top-24 h-7 w-7 text-cyan opacity-70">
+          <path d="M30 2L34 24L56 28L34 32L30 58L26 32L4 28L26 24L30 2Z" fill="currentColor"/>
+        </svg>
+
+        <div class="mx-auto max-w-6xl">
+          <div class="flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <p class="font-display text-sm font-extrabold uppercase tracking-widest text-accent">
+                ◉ Projects
+              </p>
+              <h2 class="relative mt-2 inline-block font-display text-3xl font-extrabold tracking-tight md:text-4xl">
+                Things I’ve built
+                <svg viewBox="0 0 200 16" fill="none" preserveAspectRatio="none" class="absolute -bottom-2 left-0 h-3 w-full text-coral">
+                  <path d="M2 10C30 2 55 2 75 8C95 14 120 14 145 6C165 0 185 4 198 8" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+                </svg>
+              </h2>
+            </div>
+
+            <!-- View All Projects Button -->
+            <button id="open-all-projects-btn" type="button" data-cursor="grow" class="group relative flex items-center gap-1 font-display text-sm font-extrabold text-ink/80 transition-colors hover:text-accent">
+              View All Projects
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M7 7h10v10"/><path d="M7 17 17 7"/>
+              </svg>
+              <svg viewBox="0 0 200 16" fill="none" preserveAspectRatio="none" class="absolute -bottom-2 left-0 h-2 w-[85%] text-accent opacity-0 transition-opacity group-hover:opacity-100">
+                <path d="M2 10C30 2 55 2 75 8C95 14 120 14 145 6C165 0 185 4 198 8" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+              </svg>
+            </button>
+          </div>
+
+          <!-- 3-column Projects Grid matching site-966 -->
+          <div id="projects-grid" class="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <!-- Populated via JavaScript -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Wave divider (coral) -->
+      <div class="px-6 md:px-12">
+        <svg viewBox="0 0 1440 40" fill="none" preserveAspectRatio="none" class="mx-auto h-6 w-full max-w-6xl text-coral">
+          <path d="M0 20C120 0 240 40 360 20C480 0 600 40 720 20C840 0 960 40 1080 20C1200 0 1320 40 1440 20" stroke="currentColor" stroke-width="3" stroke-dasharray="2 10" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+      <!-- ==================== EXPERIENCE SECTION ==================== -->
+      <section id="experience" class="relative overflow-hidden px-6 py-20 md:px-12">
+        <svg viewBox="0 0 200 120" fill="none" class="pointer-events-none absolute right-4 top-2 h-24 w-40 text-violet opacity-25 md:right-14">
+          <g fill="currentColor">
+            <circle cx="6" cy="6" r="1.4" opacity="0.5"/><circle cx="21" cy="6" r="1.9" opacity="0.5"/><circle cx="36" cy="6" r="2.4" opacity="0.5"/><circle cx="51" cy="6" r="1.4" opacity="0.5"/>
+            <circle cx="6" cy="21" r="1.9" opacity="0.5"/><circle cx="21" cy="21" r="2.4" opacity="0.5"/><circle cx="36" cy="21" r="1.4" opacity="0.5"/><circle cx="51" cy="21" r="1.9" opacity="0.5"/>
+          </g>
+        </svg>
+
+        <svg viewBox="0 0 60 60" fill="none" class="pointer-events-none absolute left-[3%] top-24 h-7 w-7 text-gold opacity-70">
+          <path d="M30 2L34 24L56 28L34 32L30 58L26 32L4 28L26 24L30 2Z" fill="currentColor"/>
+        </svg>
+
+        <div class="mx-auto max-w-6xl">
+          <p class="font-display text-sm font-extrabold uppercase tracking-widest text-accent">
+            ◉ Experience
+          </p>
+          <h2 class="relative mt-2 inline-block font-display text-3xl font-extrabold tracking-tight md:text-4xl">
+            Where I’ve worked
+            <svg viewBox="0 0 200 16" fill="none" preserveAspectRatio="none" class="absolute -bottom-2 left-0 h-3 w-full text-violet">
+              <path d="M2 10C30 2 55 2 75 8C95 14 120 14 145 6C165 0 185 4 198 8" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+            </svg>
+          </h2>
+
+          <div class="mt-12 grid grid-cols-1 gap-10">
+            <!-- Card 1: SQL Developer and Trainer -->
+            <div class="relative rounded-3xl border-2 border-dashed border-ink/15 bg-canvas-raised p-6 neo-shadow-card md:p-8 -rotate-1 hover:rotate-0 transition-transform">
+              <div class="masking-tape absolute -top-3 left-8 z-10 h-6 w-16 -rotate-6 rounded-[2px] bg-violet opacity-90"></div>
+              <svg viewBox="0 0 40 40" fill="none" class="pointer-events-none absolute -right-2 -top-2 h-6 w-6 text-gold">
+                <path d="M20 3L23 16L36 20L23 24L20 37L17 24L4 20L17 16L20 3Z" fill="currentColor"/>
+              </svg>
+
+              <div class="flex flex-wrap items-start justify-between gap-3">
+                <div class="flex items-start gap-4">
+                  <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-violet">
+                    <svg class="h-5 w-5 text-canvas" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                    </svg>
+                  </span>
+                  <div>
+                    <h3 class="font-display text-xl font-extrabold tracking-tight">SQL Developer and Trainer</h3>
+                    <p class="text-ink/70">Cupule Technologies Pvt. Ltd.</p>
+                  </div>
+                </div>
+
+                <span class="rounded-full bg-violet px-3 py-1 text-xs font-bold text-canvas">
+                  Sep 2024 – Present
+                </span>
+              </div>
+
+              <ul class="mt-5 space-y-2 text-ink/80">
+                <li class="flex gap-3">
+                  <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
+                  <span>Write complex SQL (multi-table joins, subqueries, CTEs, window functions) to extract, transform and report on booking, payment, revenue and cancellation data.</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
+                  <span>Designed and built realistic multi-table databases (e-commerce, bus booking) with sample data, plus a library of analytical queries used for reporting and learner assessment.</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
+                  <span>Audited schemas against requirement documents (SRS) and enforced accuracy through constraints, validation checks and data cleaning.</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
+                  <span>Debugged incorrect query results and errors by tracing joins, filters and aggregations, reducing repeat mistakes in reporting.</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
+                  <span>Trained and mentored 60-70 students in SQL through hands-on exercises, debugging sessions and graded assessments.</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
+                  <span>Maintained clear documentation of database designs, ER diagrams and SQL scripts for team handover.</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
+                  <span>Planned and delivered database and AI-agent projects independently, including a multi-agent customer service system built in Python.</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Card 2: Data Analyst Intern -->
+            <div class="relative rounded-3xl border-2 border-dashed border-ink/15 bg-canvas-raised p-6 neo-shadow-card md:p-8 rotate-1 hover:rotate-0 transition-transform">
+              <div class="masking-tape absolute -top-3 left-8 z-10 h-6 w-16 -rotate-6 rounded-[2px] bg-coral opacity-90"></div>
+              <svg viewBox="0 0 40 40" fill="none" class="pointer-events-none absolute -right-2 -top-2 h-6 w-6 text-gold">
+                <path d="M20 3L23 16L36 20L23 24L20 37L17 24L4 20L17 16L20 3Z" fill="currentColor"/>
+              </svg>
+
+              <div class="flex flex-wrap items-start justify-between gap-3">
+                <div class="flex items-start gap-4">
+                  <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-coral">
+                    <svg class="h-5 w-5 text-canvas" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                    </svg>
+                  </span>
+                  <div>
+                    <h3 class="font-display text-xl font-extrabold tracking-tight">Data Analyst Intern (6 months)</h3>
+                    <p class="text-ink/70">Cupule Technologies Pvt. Ltd.</p>
+                  </div>
+                </div>
+
+                <span class="rounded-full bg-coral px-3 py-1 text-xs font-bold text-canvas">
+                  Mar 2024 – Sep 2024
+                </span>
+              </div>
+
+              <ul class="mt-5 space-y-2 text-ink/80">
+                <li class="flex gap-3">
+                  <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
+                  <span>Analyzed business data with SQL and Python to produce reports, insights and visualizations that supported data-driven decisions.</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Education Card -->
+            <div class="flex items-center gap-4 rounded-2xl border-2 border-dashed border-ink/15 px-6 py-4">
+              <svg class="h-6 w-6 text-cyan shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21.42 10.922a1 1 0 0 0-.019-.838L12.83 2.18a2 2 0 0 0-1.66 0L2.6 10.084a1 1 0 0 0 0 1.832l8.57 7.908a2 2 0 0 0 1.66 0l6.71-6.19a1 1 0 0 0 .28-.712Z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/>
+              </svg>
+              <p class="text-sm md:text-base">
+                <span class="font-display font-extrabold">B.Sc. in Mathematics</span>, Bundelkhand University, 2024
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Wave divider (gold) -->
+      <div class="px-6 md:px-12">
+        <svg viewBox="0 0 1440 40" fill="none" preserveAspectRatio="none" class="mx-auto h-6 w-full max-w-6xl text-gold">
+          <path d="M0 20C120 0 240 40 360 20C480 0 600 40 720 20C840 0 960 40 1080 20C1200 0 1320 40 1440 20" stroke="currentColor" stroke-width="3" stroke-dasharray="2 10" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+      <!-- ==================== SKILLS SECTION ==================== -->
+      <section id="skills" class="relative overflow-hidden px-6 py-20 md:px-12">
+        <svg viewBox="0 0 200 120" fill="none" class="pointer-events-none absolute right-2 bottom-4 h-24 w-40 text-accent opacity-25 md:right-12">
+          <g fill="currentColor">
+            <circle cx="6" cy="6" r="1.4" opacity="0.5"/><circle cx="21" cy="6" r="1.9" opacity="0.5"/><circle cx="36" cy="6" r="2.4" opacity="0.5"/>
+            <circle cx="6" cy="21" r="1.9" opacity="0.5"/><circle cx="21" cy="21" r="2.4" opacity="0.5"/><circle cx="36" cy="21" r="1.4" opacity="0.5"/>
+          </g>
+        </svg>
+
+        <svg viewBox="0 0 40 40" fill="none" class="pointer-events-none absolute left-[5%] top-4 h-5 w-5 text-cyan opacity-70">
+          <path d="M20 3L23 16L36 20L23 24L20 37L17 24L4 20L17 16L20 3Z" fill="currentColor"/>
+        </svg>
+        <svg viewBox="0 0 60 60" fill="none" class="pointer-events-none absolute right-[6%] top-10 h-6 w-6 text-coral opacity-70">
+          <path d="M30 2L34 24L56 28L34 32L30 58L26 32L4 28L26 24L30 2Z" fill="currentColor"/>
+        </svg>
+        <svg viewBox="0 0 40 40" fill="none" class="pointer-events-none absolute left-[12%] bottom-6 h-4 w-4 rotate-12 text-violet opacity-60">
+          <path d="M20 3L23 16L36 20L23 24L20 37L17 24L4 20L17 16L20 3Z" fill="currentColor"/>
+        </svg>
+
+        <div class="mx-auto max-w-6xl">
+          <p class="font-display text-sm font-extrabold uppercase tracking-widest text-accent">
+            ◉ Skills
+          </p>
+          <h2 class="relative mt-2 inline-block font-display text-3xl font-extrabold tracking-tight md:text-4xl">
+            Tools I work with every day
+            <svg viewBox="0 0 200 16" fill="none" preserveAspectRatio="none" class="absolute -bottom-2 left-0 h-3 w-full text-accent">
+              <path d="M2 10C30 2 55 2 75 8C95 14 120 14 145 6C165 0 185 4 198 8" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+            </svg>
+          </h2>
+
+          <svg viewBox="0 0 100 60" fill="none" class="pointer-events-none mt-1 hidden h-8 w-16 text-ink/30 sm:block">
+            <path d="M4 8C30 4 55 44 94 48" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="7 8"/>
+            <path d="M80 40L96 49L84 58" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+
+          <!-- Skills Badges Grid -->
+          <div id="skills-container" class="mt-10 flex flex-wrap gap-4">
+            <!-- Populated via JavaScript -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Wave divider (cyan) -->
+      <div class="px-6 md:px-12">
+        <svg viewBox="0 0 1440 40" fill="none" preserveAspectRatio="none" class="mx-auto h-6 w-full max-w-6xl text-cyan">
+          <path d="M0 20C120 0 240 40 360 20C480 0 600 40 720 20C840 0 960 40 1080 20C1200 0 1320 40 1440 20" stroke="currentColor" stroke-width="3" stroke-dasharray="2 10" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+      <!-- ==================== ABOUT SECTION ==================== -->
+      <section id="about" class="relative overflow-x-hidden px-6 py-20 md:px-12">
+        <svg viewBox="0 0 200 120" fill="none" class="pointer-events-none absolute left-2 top-6 h-24 w-40 text-violet opacity-25 md:left-10">
+          <g fill="currentColor">
+            <circle cx="6" cy="6" r="1.4" opacity="0.5"/><circle cx="21" cy="6" r="1.9" opacity="0.5"/><circle cx="36" cy="6" r="2.4" opacity="0.5"/>
+            <circle cx="6" cy="21" r="1.9" opacity="0.5"/><circle cx="21" cy="21" r="2.4" opacity="0.5"/><circle cx="36" cy="21" r="1.4" opacity="0.5"/>
+          </g>
+        </svg>
+
+        <div class="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 md:grid-cols-2">
+          <!-- Left Column: Tilted Photo Card -->
+          <div class="relative flex justify-center">
+            <div class="relative rounded-[2rem] bg-canvas-raised p-6 neo-shadow-lg -rotate-2 transition-transform duration-300 hover:rotate-0">
+              <div class="masking-tape absolute -top-3 left-10 z-10 h-6 w-16 -rotate-6 rounded-[2px] bg-coral opacity-90"></div>
+
+              <img src="./img/krish.jpg" alt="Krish Singh" class="w-64 rounded-2xl object-cover md:w-72" />
+
+              <svg viewBox="0 0 60 60" fill="none" class="pointer-events-none absolute -right-4 -top-4 h-9 w-9 text-accent">
+                <path d="M30 2L34 24L56 28L34 32L30 58L26 32L4 28L26 24L30 2Z" fill="currentColor"/>
+              </svg>
+              <svg viewBox="0 0 40 40" fill="none" class="pointer-events-none absolute -bottom-3 -left-3 h-6 w-6 text-gold">
+                <path d="M20 3L23 16L36 20L23 24L20 37L17 24L4 20L17 16L20 3Z" fill="currentColor"/>
+              </svg>
+
+              <!-- Floating Coral Badge: That's me! -->
+              <div class="pointer-events-none absolute -right-10 top-1/3 hidden rotate-3 rounded-xl bg-coral px-3 py-1.5 font-display text-xs font-extrabold text-canvas neo-shadow-badge sm:block">
+                That’s me!
+              </div>
+
+              <svg viewBox="0 0 120 20" fill="none" class="pointer-events-none absolute left-1/2 -bottom-8 h-4 w-24 -translate-x-1/2 text-ink/20">
+                <path d="M2 14C10 4 18 4 26 14C34 24 42 24 50 14C58 4 66 4 74 14C82 24 90 24 98 14C104 6 112 6 118 12" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Right Column: Content & Stats -->
+          <div>
+            <p class="font-display text-sm font-extrabold uppercase tracking-widest text-accent">
+              ◉ About Me
+            </p>
+            <h2 class="relative inline-block mt-2 font-display text-3xl font-extrabold tracking-tight md:text-4xl">
+              Hi, I’m Krish — I turn data into answers.
+              <svg viewBox="0 0 200 16" fill="none" preserveAspectRatio="none" class="absolute -bottom-2 left-0 h-3 w-full text-violet">
+                <path d="M2 10C30 2 55 2 75 8C95 14 120 14 145 6C165 0 185 4 198 8" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+              </svg>
+            </h2>
+
+            <p class="mt-5 max-w-lg text-ink/80">
+              I’m a SQL Developer and Data Analyst with 2+ years of hands-on experience in MySQL and PostgreSQL — multi-table joins, CTEs, window functions, schema design and reporting queries. I also train learners in SQL and build AI agent projects in Python.
+            </p>
+
+            <!-- Expandable "More About Me" drawer -->
+            <div id="about-drawer" class="max-h-0 overflow-hidden transition-all duration-400 ease-in-out">
+              <div class="mt-4 max-w-lg space-y-3 border-l-2 border-dashed border-accent/40 pl-4 text-ink/75">
+                <p>At Cupule Technologies I write complex SQL to extract, transform and report on booking, payment, revenue and cancellation data, and I audit schemas against requirement documents (SRS).</p>
+                <p>I designed a normalized PostgreSQL schema for an intercity bus booking platform (SETURA), with ER diagrams, constraints, sample data and full design documentation.</p>
+                <p>Before that I spent six months as a Data Analyst Intern, turning business data into reports and visualizations. I hold a B.Sc. in Mathematics from Bundelkhand University (2024) and speak Hindi and English.</p>
+              </div>
+            </div>
+
+            <!-- Stats Row (site-966) -->
+            <div class="mt-8 flex flex-wrap gap-6">
+              <div>
+                <p class="font-display text-3xl font-extrabold text-accent">2+</p>
+                <p class="text-sm text-ink/70">Years in SQL</p>
+              </div>
+              <div>
+                <p class="font-display text-3xl font-extrabold text-accent">60-70</p>
+                <p class="text-sm text-ink/70">Learners mentored</p>
+              </div>
+              <div>
+                <p class="font-display text-3xl font-extrabold text-accent">6</p>
+                <p class="text-sm text-ink/70">GitHub projects</p>
+              </div>
+            </div>
+
+            <!-- Actions: Toggle Button & Socials -->
+            <div class="relative mt-9 flex flex-wrap items-center gap-4">
+              <svg viewBox="0 0 100 60" fill="none" class="pointer-events-none absolute -top-9 left-6 hidden h-8 w-16 -rotate-[100deg] text-ink/30 sm:block">
+                <path d="M4 8C30 4 55 44 94 48" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="7 8"/>
+                <path d="M80 40L96 49L84 58" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              </svg>
+
+              <button id="toggle-about-btn" aria-expanded="false" data-cursor="grow" class="magnetic-btn flex items-center gap-2 rounded-full bg-accent px-7 py-4 font-display text-sm font-extrabold text-canvas neo-shadow-btn transition-transform hover:-translate-y-0.5">
+                <span id="toggle-about-text">More About Me</span>
+                <svg id="toggle-about-icon" class="h-4 w-4 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m6 9 6 6 6-6"/>
+                </svg>
+              </button>
+
+              <div class="flex items-center gap-3">
+                <a href="https://www.linkedin.com/in/krish-singh-688884320/" target="_blank" rel="noopener noreferrer" data-cursor="grow" aria-label="LinkedIn" class="flex h-11 w-11 items-center justify-center rounded-full border-2 border-ink/15 text-ink transition-colors hover:border-accent hover:text-accent">
+                  <svg class="h-4.5 w-4.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/>
+                  </svg>
+                </a>
+                <a href="https://github.com/singhkrish2607-sudo" target="_blank" rel="noopener noreferrer" data-cursor="grow" aria-label="GitHub" class="flex h-11 w-11 items-center justify-center rounded-full border-2 border-ink/15 text-ink transition-colors hover:border-accent hover:text-accent">
+                  <svg class="h-4.5 w-4.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== CONTACT / FOOTER SECTION ==================== -->
+      <footer id="contact" class="relative overflow-hidden px-6 pb-10 pt-16 md:px-12">
+        <svg viewBox="0 0 200 120" fill="none" class="pointer-events-none absolute left-4 top-4 h-24 w-40 text-gold opacity-20 md:left-16">
+          <g fill="currentColor">
+            <circle cx="6" cy="6" r="1.4" opacity="0.5"/><circle cx="21" cy="6" r="1.9" opacity="0.5"/><circle cx="36" cy="6" r="2.4" opacity="0.5"/>
+            <circle cx="6" cy="21" r="1.9" opacity="0.5"/><circle cx="21" cy="21" r="2.4" opacity="0.5"/><circle cx="36" cy="21" r="1.4" opacity="0.5"/>
+          </g>
+        </svg>
+
+        <svg viewBox="0 0 40 40" fill="none" class="pointer-events-none absolute right-[8%] top-2 h-5 w-5 rotate-6 text-cyan opacity-60">
+          <path d="M20 3L23 16L36 20L23 24L20 37L17 24L4 20L17 16L20 3Z" fill="currentColor"/>
+        </svg>
+        <svg viewBox="0 0 120 20" fill="none" class="pointer-events-none absolute left-[6%] bottom-10 h-4 w-24 text-ink/15">
+          <path d="M2 14C10 4 18 4 26 14C34 24 42 24 50 14C58 4 66 4 74 14C82 24 90 24 98 14C104 6 112 6 118 12" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+        </svg>
+
+        <!-- Big Card (site-966: "Have data to untangle? Let's talk.") -->
+        <div class="relative mx-auto max-w-6xl rounded-[2.5rem] border-2 border-dashed border-ink/15 bg-canvas-raised px-8 py-14 text-center neo-shadow-lg md:px-16">
+          <div class="masking-tape absolute -top-3 left-1/2 z-10 h-6 w-16 -translate-x-1/2 -rotate-6 rounded-[2px] bg-violet opacity-90"></div>
+
+          <svg viewBox="0 0 40 40" fill="none" class="pointer-events-none absolute -left-3 -top-3 h-8 w-8 text-gold">
+            <path d="M20 3L23 16L36 20L23 24L20 37L17 24L4 20L17 16L20 3Z" fill="currentColor"/>
+          </svg>
+          <svg viewBox="0 0 60 60" fill="none" class="pointer-events-none absolute -right-4 -top-4 h-10 w-10 text-accent">
+            <path d="M30 2L34 24L56 28L34 32L30 58L26 32L4 28L26 24L30 2Z" fill="currentColor"/>
+          </svg>
+          <svg viewBox="0 0 40 40" fill="none" class="pointer-events-none absolute -bottom-3 right-10 h-6 w-6 text-cyan">
+            <path d="M20 3L23 16L36 20L23 24L20 37L17 24L4 20L17 16L20 3Z" fill="currentColor"/>
+          </svg>
+
+          <p class="font-display text-sm font-extrabold uppercase tracking-widest text-accent">
+            ◉ Let’s Talk
+          </p>
+
+          <h2 class="relative mt-3 inline-block font-display text-4xl font-extrabold tracking-tight md:text-6xl">
+            Have data to untangle?<br />Let’s talk.
+            <svg viewBox="0 0 200 16" fill="none" preserveAspectRatio="none" class="absolute -bottom-3 left-1/2 h-4 w-2/3 -translate-x-1/2 text-accent">
+              <path d="M2 10C30 2 55 2 75 8C95 14 120 14 145 6C165 0 185 4 198 8" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+            </svg>
+          </h2>
+
+          <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+            <a href="mailto:singh.krish2003@gmail.com" data-cursor="grow" class="magnetic-btn flex items-center gap-2 rounded-full bg-accent px-8 py-4 font-display text-sm font-extrabold text-canvas neo-shadow-btn transition-transform hover:-translate-y-0.5">
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+              </svg>
+              singh.krish2003@gmail.com
+            </a>
+
+            <button id="footer-projects-btn" data-cursor="grow" class="magnetic-btn flex items-center gap-2 rounded-full border-2 border-ink/25 px-8 py-4 font-display text-sm font-extrabold text-ink transition-colors hover:border-accent hover:text-accent">
+              View All Projects
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M7 7h10v10"/><path d="M7 17 17 7"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Footer Bottom (site-966: includes circular download resume button) -->
+        <div class="mx-auto mt-10 flex max-w-6xl flex-col items-center justify-between gap-4 text-sm text-ink/60 md:flex-row">
+          <p id="copyright-text">
+            © 2026 Krish Singh. All rights reserved.
+          </p>
+
+          <div class="flex items-center gap-3">
+            <a href="https://www.linkedin.com/in/krish-singh-688884320/" target="_blank" rel="noopener noreferrer" data-cursor="grow" aria-label="LinkedIn" class="flex h-9 w-9 items-center justify-center rounded-full border border-ink/15 text-ink transition-colors hover:border-accent hover:text-accent">
+              <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/>
+              </svg>
+            </a>
+            <a href="https://github.com/singhkrish2607-sudo" target="_blank" rel="noopener noreferrer" data-cursor="grow" aria-label="GitHub" class="flex h-9 w-9 items-center justify-center rounded-full border border-ink/15 text-ink transition-colors hover:border-accent hover:text-accent">
+              <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/>
+              </svg>
+            </a>
+            <a href="./Resume.pdf" download="Resume.pdf" data-cursor="grow" aria-label="Download resume" title="Download resume" class="flex h-9 w-9 items-center justify-center rounded-full bg-accent text-canvas transition-transform hover:scale-110">
+              <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <!-- ==================== MODALS ==================== -->
+
+    <!-- Single Project Details Modal -->
+    <div id="project-detail-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/70 px-4 backdrop-blur-sm transition-opacity duration-200">
+      <div id="project-detail-content" class="relative max-h-[85vh] w-full max-w-lg overflow-y-auto rounded-3xl border-2 border-dashed border-ink/20 bg-canvas-raised p-6 neo-shadow-lg sm:p-8" onclick="event.stopPropagation()">
+        <div id="modal-tape" class="masking-tape absolute -top-3 left-8 z-10 h-6 w-16 -rotate-6 rounded-[2px] opacity-90"></div>
+
+        <svg viewBox="0 0 60 60" fill="none" class="pointer-events-none absolute -right-3 -top-3 h-9 w-9 text-accent">
+          <path d="M30 2L34 24L56 28L34 32L30 58L26 32L4 28L26 24L30 2Z" fill="currentColor"/>
+        </svg>
+
+        <button id="close-project-detail-btn" data-cursor="grow" aria-label="Close project details" class="absolute right-4 top-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-canvas text-ink transition-transform hover:scale-110">
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 6 6 18"/><path d="m6 6 12 12"/>
+          </svg>
+        </button>
+
+        <div class="overflow-hidden rounded-2xl">
+          <img id="modal-project-img" src="" alt="Project artwork" class="aspect-square w-full rounded-2xl object-cover" />
+        </div>
+
+        <span id="modal-project-tag" class="mt-4 inline-block rounded-full px-3 py-1 text-xs font-bold text-canvas"></span>
+
+        <h3 class="relative mt-3 inline-block font-display text-2xl font-extrabold tracking-tight">
+          <span id="modal-project-title"></span>
+          <svg viewBox="0 0 200 16" fill="none" preserveAspectRatio="none" class="absolute -bottom-2 left-0 h-2 w-full text-accent">
+            <path d="M2 10C30 2 55 2 75 8C95 14 120 14 145 6C165 0 185 4 198 8" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+          </svg>
+        </h3>
+
+        <p id="modal-project-desc" class="mt-5 text-ink/80"></p>
+
+        <a id="modal-project-link" href="#" target="_blank" rel="noopener noreferrer" data-cursor="grow" class="mt-6 inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 font-display text-sm font-extrabold text-canvas transition-transform hover:scale-105">
+          View on GitHub
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 7h10v10"/><path d="M7 17 17 7"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- All Projects Modal -->
+    <div id="all-projects-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/70 px-4 backdrop-blur-sm transition-opacity duration-200">
+      <div class="relative max-h-[85vh] w-full max-w-4xl overflow-y-auto rounded-3xl border-2 border-dashed border-ink/20 bg-canvas-raised p-6 neo-shadow-lg sm:p-8" onclick="event.stopPropagation()">
+        <div class="masking-tape absolute -top-3 left-8 z-10 h-6 w-16 -rotate-6 rounded-[2px] bg-accent opacity-90"></div>
+
+        <svg viewBox="0 0 60 60" fill="none" class="pointer-events-none absolute -right-3 -top-3 h-9 w-9 text-accent">
+          <path d="M30 2L34 24L56 28L34 32L30 58L26 32L4 28L26 24L30 2Z" fill="currentColor"/>
+        </svg>
+
+        <button id="close-all-projects-btn" data-cursor="grow" aria-label="Close all projects" class="absolute right-4 top-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-canvas text-ink transition-transform hover:scale-110">
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 6 6 18"/><path d="m6 6 12 12"/>
+          </svg>
+        </button>
+
+        <p class="font-display text-sm font-extrabold uppercase tracking-widest text-accent">
+          ◉ All Projects
+        </p>
+        <h3 class="relative mt-2 inline-block font-display text-2xl font-extrabold tracking-tight md:text-3xl">
+          All my GitHub projects
+          <svg viewBox="0 0 200 16" fill="none" preserveAspectRatio="none" class="absolute -bottom-2 left-0 h-2 w-full text-accent">
+            <path d="M2 10C30 2 55 2 75 8C95 14 120 14 145 6C165 0 185 4 198 8" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+          </svg>
+        </h3>
+
+        <!-- 2-column grid in modal -->
+        <div id="all-projects-grid" class="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2">
+          <!-- Populated via JavaScript -->
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== JAVASCRIPT DATA & LOGIC ==================== -->
+    <script>
+      const GITHUB_BASE = "https://github.com/singhkrish2607-sudo/";
+
+      // 1. Projects Data (6 projects matching site-966)
+      const projects = [
+        {
+          title: "Bank Management System",
+          tag: "Python · MySQL",
+          img: "./img/project-1.png",
+          accent: "var(--color-violet)",
+          rotate: "-rotate-2",
+          url: GITHUB_BASE + "Bank-management-system-using-python-",
+          description: "A command-line banking app built with Python and MySQL. Customers can register, sign in, check balances, deposit, withdraw and transfer money, with a separate transaction table for each customer."
+        },
+        {
+          title: "Bus Booking Data Analysis",
+          tag: "MySQL",
+          img: "./img/project-2.png",
+          accent: "var(--color-coral)",
+          rotate: "rotate-1",
+          url: GITHUB_BASE + "Bus_booking_analysis",
+          description: "A bus booking and cancellation database with realistic data, an ER diagram and 19 business-analysis queries using joins, CTEs and aggregations to measure revenue, seat occupancy, payments and coupons."
+        },
+        {
+          title: "RAG Chatbot",
+          tag: "Python · RAG",
+          img: "./img/project-3.png",
+          accent: "var(--color-cyan)",
+          rotate: "-rotate-1",
+          url: GITHUB_BASE + "ChatBot-using-RAG",
+          description: "A lightweight Retrieval-Augmented Generation chatbot that answers questions from PDF documents, with a data loader, embeddings, vector store and a retrieval-plus-generation pipeline."
+        },
+        {
+          title: "DataVision AI",
+          tag: "Python · AI",
+          img: "./img/project-4.png",
+          accent: "var(--color-gold)",
+          rotate: "rotate-2",
+          url: GITHUB_BASE + "DataVision_AI",
+          description: "An AI-powered data analysis tool with a multi-agent architecture. It analyzes your data, generates insights and exports straight to Power BI dashboards."
+        },
+        {
+          title: "Self-Correcting Code Agent",
+          tag: "Python · AI Agent",
+          img: "./img/project-5.png",
+          accent: "var(--color-violet)",
+          rotate: "-rotate-2",
+          url: GITHUB_BASE + "Reflective-Self-Correcting-Code-Generation-Agent",
+          description: "An AI agent that generates working code for a problem, then uses the reflection pattern to test, examine and correct its own code until it works."
+        },
+        {
+          title: "Zepto Sales Analysis",
+          tag: "MySQL",
+          img: "./img/project-6.png",
+          accent: "var(--color-coral)",
+          rotate: "rotate-1",
+          url: GITHUB_BASE + "Zepto-Data-Analysis-SQL-Project",
+          description: "End-to-end analysis of Zepto sales data in MySQL: data cleaning, exploration and business insights on pricing, discounts and inventory patterns."
+        }
+      ];
+
+      // 2. Technical Skills Data (7 items matching site-966)
+      const skills = [
+        {
+          name: "MySQL",
+          accent: "var(--color-violet)",
+          tilt: "-rotate-3",
+          icon: `<svg class="h-4.5 w-4.5 text-canvas" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></svg>`
+        },
+        {
+          name: "PostgreSQL",
+          accent: "var(--color-coral)",
+          tilt: "rotate-2",
+          icon: `<svg class="h-4.5 w-4.5 text-canvas" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></svg>`
+        },
+        {
+          name: "Joins, CTEs & Window Functions",
+          accent: "var(--color-cyan)",
+          tilt: "-rotate-2",
+          icon: `<svg class="h-4.5 w-4.5 text-canvas" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>`
+        },
+        {
+          name: "Python",
+          accent: "var(--color-gold)",
+          tilt: "rotate-3",
+          icon: `<svg class="h-4.5 w-4.5 text-canvas" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>`
+        },
+        {
+          name: "Matplotlib & Reporting",
+          accent: "var(--color-accent)",
+          tilt: "-rotate-2",
+          icon: `<svg class="h-4.5 w-4.5 text-canvas" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>`
+        },
+        {
+          name: "Data Quality & Cleaning",
+          accent: "var(--color-violet)",
+          tilt: "rotate-2",
+          icon: `<svg class="h-4.5 w-4.5 text-canvas" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>`
+        },
+        {
+          name: "RAG, LangChain & LangGraph",
+          accent: "var(--color-coral)",
+          tilt: "-rotate-3",
+          icon: `<svg class="h-4.5 w-4.5 text-canvas" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>`
+        }
+      ];
+
+      // 3. Render Project Card HTML
+      function createProjectCard(p, i) {
+        const tapePosition = i % 2 === 0 ? "left-6 -rotate-8" : "right-6 rotate-6";
+
+        return `
+          <button type="button" data-cursor="grow" onclick="openProjectModal(${i})" class="group relative block w-full text-left rounded-3xl border-2 border-dashed border-ink/15 bg-canvas-raised p-3 neo-shadow-card ${p.rotate} transition-all duration-300 hover:rotate-0 hover:-translate-y-2 hover:scale-[1.03]">
+            <div class="masking-tape absolute -top-3 z-10 h-6 w-16 rounded-[2px] opacity-90 ${tapePosition}" style="background-color: ${p.accent};"></div>
+
+            <div class="overflow-hidden rounded-2xl">
+              <img src="${p.img}" alt="${p.title} project thumbnail" class="aspect-square w-full rounded-2xl object-cover transition-transform duration-500 group-hover:scale-110" />
+            </div>
+
+            <div class="px-1 pb-1 pt-4">
+              <span class="rounded-full px-3 py-1 text-xs font-bold text-canvas" style="background-color: ${p.accent};">
+                ${p.tag}
+              </span>
+              <h3 class="mt-3 font-display text-xl font-extrabold tracking-tight">
+                ${p.title}
+              </h3>
+            </div>
+
+            <svg viewBox="0 0 40 40" fill="none" class="pointer-events-none absolute -right-2 -top-2 h-5 w-5 text-gold opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+              <path d="M20 3L23 16L36 20L23 24L20 37L17 24L4 20L17 16L20 3Z" fill="currentColor"/>
+            </svg>
+          </button>
+        `;
+      }
+
+      // Populate Projects Grid & All Projects Modal Grid
+      const projectsGrid = document.getElementById("projects-grid");
+      const allProjectsGrid = document.getElementById("all-projects-grid");
+
+      projectsGrid.innerHTML = projects.map((p, i) => createProjectCard(p, i)).join("");
+      allProjectsGrid.innerHTML = projects.map((p, i) => createProjectCard(p, i)).join("");
+
+      // 4. Render Skills
+      const skillsContainer = document.getElementById("skills-container");
+      skillsContainer.innerHTML = skills.map(s => `
+        <div data-cursor="grow" class="group relative flex items-center gap-3 rounded-2xl border-2 border-dashed border-ink/15 bg-canvas-raised px-5 py-4 neo-shadow-skill ${s.tilt} transition-all duration-300 hover:rotate-0 hover:-translate-y-1 hover:scale-105">
+          <span class="flex h-9 w-9 items-center justify-center rounded-full" style="background-color: ${s.accent};">
+            ${s.icon}
+          </span>
+          <span class="font-display text-sm font-extrabold">${s.name}</span>
+          <svg viewBox="0 0 40 40" fill="none" class="pointer-events-none absolute -right-2 -top-2 h-4 w-4 rotate-6 text-gold opacity-0 transition-opacity group-hover:opacity-100">
+            <path d="M20 3L23 16L36 20L23 24L20 37L17 24L4 20L17 16L20 3Z" fill="currentColor"/>
+          </svg>
+        </div>
+      `).join("");
+
+      // 5. Interactive Project Details Modal
+      const projectDetailModal = document.getElementById("project-detail-modal");
+      const modalTape = document.getElementById("modal-tape");
+      const modalProjectImg = document.getElementById("modal-project-img");
+      const modalProjectTag = document.getElementById("modal-project-tag");
+      const modalProjectTitle = document.getElementById("modal-project-title");
+      const modalProjectDesc = document.getElementById("modal-project-desc");
+      const modalProjectLink = document.getElementById("modal-project-link");
+      const closeProjectDetailBtn = document.getElementById("close-project-detail-btn");
+
+      function openProjectModal(index) {
+        const p = projects[index];
+        modalTape.style.backgroundColor = p.accent;
+        modalProjectImg.src = p.img;
+        modalProjectImg.alt = `${p.title} project artwork`;
+        modalProjectTag.textContent = p.tag;
+        modalProjectTag.style.backgroundColor = p.accent;
+        modalProjectTitle.textContent = p.title;
+        modalProjectDesc.textContent = p.description;
+        modalProjectLink.href = p.url;
+
+        projectDetailModal.classList.remove("hidden");
+        projectDetailModal.classList.add("flex");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeProjectModal() {
+        projectDetailModal.classList.add("hidden");
+        projectDetailModal.classList.remove("flex");
+        if (allProjectsModal.classList.contains("hidden")) {
+          document.body.style.overflow = "";
+        }
+      }
+
+      closeProjectDetailBtn.addEventListener("click", closeProjectModal);
+      projectDetailModal.addEventListener("click", (e) => {
+        if (e.target === projectDetailModal) closeProjectModal();
+      });
+
+      // 6. All Projects Modal
+      const allProjectsModal = document.getElementById("all-projects-modal");
+      const openAllProjectsBtn = document.getElementById("open-all-projects-btn");
+      const footerProjectsBtn = document.getElementById("footer-projects-btn");
+      const closeAllProjectsBtn = document.getElementById("close-all-projects-btn");
+
+      function openAllProjects() {
+        allProjectsModal.classList.remove("hidden");
+        allProjectsModal.classList.add("flex");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeAllProjects() {
+        allProjectsModal.classList.add("hidden");
+        allProjectsModal.classList.remove("flex");
+        document.body.style.overflow = "";
+      }
+
+      openAllProjectsBtn.addEventListener("click", openAllProjects);
+      footerProjectsBtn.addEventListener("click", () => {
+        const projectsEl = document.getElementById("projects");
+        if (projectsEl) projectsEl.scrollIntoView({ behavior: "smooth" });
+        openAllProjects();
+      });
+      closeAllProjectsBtn.addEventListener("click", closeAllProjects);
+      allProjectsModal.addEventListener("click", (e) => {
+        if (e.target === allProjectsModal) closeAllProjects();
+      });
+
+      // Escape key closes modals
+      window.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          if (!projectDetailModal.classList.contains("hidden")) {
+            closeProjectModal();
+          } else if (!allProjectsModal.classList.contains("hidden")) {
+            closeAllProjects();
+          }
+        }
+      });
+
+      // 7. About Drawer Toggle
+      const toggleAboutBtn = document.getElementById("toggle-about-btn");
+      const aboutDrawer = document.getElementById("about-drawer");
+      const toggleAboutText = document.getElementById("toggle-about-text");
+      const toggleAboutIcon = document.getElementById("toggle-about-icon");
+      let isAboutOpen = false;
+
+      toggleAboutBtn.addEventListener("click", () => {
+        isAboutOpen = !isAboutOpen;
+        toggleAboutBtn.setAttribute("aria-expanded", isAboutOpen);
+        if (isAboutOpen) {
+          aboutDrawer.style.maxHeight = aboutDrawer.scrollHeight + "px";
+          toggleAboutText.textContent = "Show Less";
+          toggleAboutIcon.classList.add("rotate-180");
+        } else {
+          aboutDrawer.style.maxHeight = "0px";
+          toggleAboutText.textContent = "More About Me";
+          toggleAboutIcon.classList.remove("rotate-180");
+        }
+      });
+
+      // 8. Mobile Menu Drawer
+      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const mobileCloseBtn = document.getElementById("mobile-close-btn");
+      const mobileNavLinks = document.querySelectorAll(".mobile-nav-link");
+
+      function openMobileMenu() {
+        mobileMenu.classList.remove("-translate-y-full", "opacity-0", "pointer-events-none");
+        mobileMenu.classList.add("translate-y-0", "opacity-100");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeMobileMenu() {
+        mobileMenu.classList.add("-translate-y-full", "opacity-0", "pointer-events-none");
+        mobileMenu.classList.remove("translate-y-0", "opacity-100");
+        document.body.style.overflow = "";
+      }
+
+      mobileMenuBtn.addEventListener("click", openMobileMenu);
+      mobileCloseBtn.addEventListener("click", closeMobileMenu);
+      mobileNavLinks.forEach(link => {
+        link.addEventListener("click", closeMobileMenu);
+      });
+
+      // 9. Custom Dual Cursor Logic
+      const cursorDot = document.getElementById("cursor-dot");
+      const cursorRing = document.getElementById("cursor-ring");
+
+      if (window.matchMedia("(pointer: fine)").matches && cursorDot && cursorRing) {
+        let mouseX = -100;
+        let mouseY = -100;
+        let ringX = -100;
+        let ringY = -100;
+
+        window.addEventListener("mousemove", (e) => {
+          mouseX = e.clientX;
+          mouseY = e.clientY;
+          cursorDot.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+        });
+
+        function renderCursor() {
+          ringX += (mouseX - ringX) * 0.2;
+          ringY += (mouseY - ringY) * 0.2;
+          cursorRing.style.transform = `translate(${ringX}px, ${ringY}px)`;
+          requestAnimationFrame(renderCursor);
+        }
+        requestAnimationFrame(renderCursor);
+
+        window.addEventListener("mouseover", (e) => {
+          if (e.target.closest('[data-cursor="grow"]')) {
+            cursorRing.classList.add("scale-150");
+          } else {
+            cursorRing.classList.remove("scale-150");
+          }
+        });
+      }
+
+      // 10. Magnetic Buttons Micro-interaction
+      if (window.matchMedia("(pointer: fine)").matches) {
+        document.querySelectorAll(".magnetic-btn").forEach(btn => {
+          btn.addEventListener("mousemove", (e) => {
+            const rect = btn.getBoundingClientRect();
+            const centerX = rect.left + rect.width / 2;
+            const centerY = rect.top + rect.height / 2;
+            const deltaX = (e.clientX - centerX) * 0.25;
+            const deltaY = (e.clientY - centerY) * 0.25;
+            btn.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
+          });
+          btn.addEventListener("mouseleave", () => {
+            btn.style.transform = "translate(0px, 0px)";
+          });
+        });
+      }
+
+      // Dynamic copyright year
+      const copyrightEl = document.getElementById("copyright-text");
+      if (copyrightEl) {
+        copyrightEl.textContent = `© ${new Date().getFullYear()} Krish Singh. All rights reserved.`;
+      }
+    </script>
+  </body>
+</html>

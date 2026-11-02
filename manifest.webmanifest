@@ -1,0 +1,10 @@
+{
+  "name": "Krish Singh — SQL Developer & Data Analyst",
+  "short_name": "Krish Singh",
+  "description": "Portfolio of Krish Singh, a 2D animator, motion designer and video editor bringing playful characters and stories to life.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#221b3d",
+  "theme_color": "#221b3d",
+  "icons": [{ "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}
