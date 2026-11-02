@@ -93,7 +93,7 @@ export function Contact() {
             <Github size={15} />
           </a>
           <a
-            href="/Resume.pdf"
+            href="./Resume.pdf"
             download="Resume.pdf"
             data-cursor="grow"
             aria-label="Download resume"

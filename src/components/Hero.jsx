@@ -19,7 +19,7 @@ export function Hero() {
 
   const downloadResume = () => {
     const link = document.createElement("a");
-    link.href = "/Resume.pdf";
+    link.href = "./Resume.pdf";
     link.download = "Resume.pdf";
     link.click();
   };

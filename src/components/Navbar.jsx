@@ -80,7 +80,7 @@ export function Navbar() {
 
           <div>
             <a
-              href="/Resume.pdf"
+              href="./Resume.pdf"
               download="Resume.pdf"
               className="flex w-full items-center justify-center gap-2 rounded-full bg-(--color-accent) px-6 py-4 font-display text-sm font-extrabold text-(--color-canvas) shadow-[4px_6px_0_0_oklch(0.16_0.04_290)]"
             >
